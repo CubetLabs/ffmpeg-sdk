@@ -31,8 +31,23 @@ function formattedTime(milliSeconds) {
   return formattedTime.split('Z')[0];
 }
 
-function slice(inputFilePath, outputFilePath, startTime, endTime){
-  let duration = timeDifference(startTime, endTime);
-  console.log('test', `ffmpeg -ss ${startTime} -i ${inputFilePath} -c copy -t ${duration} ${outputFilePath}`);
-  return execute(`ffmpeg -ss ${startTime} -i ${inputFilePath} -c copy -t ${duration} ${outputFilePath} -y`);
+function clip(inputFilePath, outputFilePath, startTime, endTime){
+  let duration = endTime - startTime;
+  return execute(`ffmpeg -ss ${formattedTime(startTime)} -i ${inputFilePath} -c copy -t ${formattedTime(duration)} ${outputFilePath} -y`);
+}
+
+function split(inputFilePath, outputFilePath, clipPoints){
+  let splitQueue = [];
+  clipPoints.forEach((cl, ci) => {
+    if(clipPoints.length - 1 > ci)
+      splitQueue.push(clip(inputFilePath, `${ci}-${outputFilePath}`, clipPoints[ci], clipPoints[ci+1]));
+  });
+  return Promise.all(splitQueue);
+}
+
+module.exports = {
+  clip,
+  split,
+  formattedTime,
+  timeInMilliSeconds
 }
