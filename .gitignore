@@ -1,4 +1,8 @@
 node_modules/
 *.mp4
+*.avi
+*.mp3
+*.mkv
+*.wav
 samples/
 test/
