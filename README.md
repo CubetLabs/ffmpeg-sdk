@@ -1,6 +1,6 @@
 # ffmpeg-sdk
 
-##Usage
+## Usage
 
 ```js
 const ffmpeg = require('ffmpeg-sdk');
@@ -12,7 +12,7 @@ ffmpeg.clip('input.mp4', 'output.mp4', startTime, endTime)
   console.log('File clip error.');
 });
 
-split('input.mp4', 'output.mp4', [1000, 56770, 67880, 89909])
+ffmpeg.split('input.mp4', 'output.mp4', [1000, 56770, 67880, 89909])
 .then(fileClipped => {
   console.log('File split success.');
 })
