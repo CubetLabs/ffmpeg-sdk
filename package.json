@@ -1,0 +1,19 @@
+{
+  "name": "ffmpeg-sdk",
+  "version": "0.0.1",
+  "description": "ffmpeg wrapper for nodejs",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": ["video", "audio", "slice", "clip", "transcode", "ffmpeg", "convert"],
+  "author": {
+    "name" : "Shajan Jacob", 
+    "email" : "shajanjp@gmail.com",
+    "url" : "http://shajanjacob.com/"
+  },
+  "repository" :{ 
+    "type" : "git", 
+    "url" : "https://github.com/shajanjp/ffmpeg-sdk.git"
+  },
+  "license": "ISC"
+}
