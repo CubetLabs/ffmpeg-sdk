@@ -45,9 +45,15 @@ function split(inputFilePath, outputFilePath, clipPoints){
   return Promise.all(splitQueue);
 }
 
+function parseAudio(inputFilePath, outputFilePath){
+  return execute(`ffmpeg -i ${inputFilePath} -f mp2 ${outputFilePath}`); 
+}
+
 module.exports = {
+  execute,
   clip,
   split,
+  parseAudio,
   formattedTime,
   timeInMilliSeconds
 }
