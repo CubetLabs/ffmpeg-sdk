@@ -33,7 +33,7 @@ function formattedTime(milliSeconds) {
 
 function clip(inputFilePath, outputFilePath, startTime, endTime) {
   let duration = endTime - startTime;
-  return execute(`ffmpeg -ss ${formattedTime(startTime)} -i ${inputFilePath} -c copy -t ${formattedTime(duration)} ${outputFilePath} -y`);
+  return execute(`ffmpeg -ss ${formattedTime(startTime)} -i ${inputFilePath} -t ${formattedTime(duration)} ${outputFilePath} -y`);
 }
 
 function split(inputFilePath, outputFilePath, clipPoints) {
