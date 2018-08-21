@@ -24,9 +24,9 @@ ffmpeg.split('input.mp4', 'output.mp4', [1000, 56770, 67880, 89909])
 });
 
 // Parse audio from input.mp4 and saves in output.mp3  
-ffmpeg.clip('input.mp4', 'output.mp3')
+ffmpeg.parseAudio('input.mp4', 'output.mp3')
 .then(audioParsed => {
-  console.log('Audui parse success.');
+  console.log('Auduo parse success.');
 })
 .catch(error => {
   console.log('Audio parse error.');
