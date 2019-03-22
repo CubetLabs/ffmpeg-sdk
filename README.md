@@ -6,6 +6,10 @@ Minimal ffmpeg wrapper for NodeJS
  * Media file splitting
  * Parsing audio from media files
 
+## Prerequisites
+ * ffmpeg 
+   Download it [here](https://www.ffmpeg.org/download.html).
+
 ## Installation 
 `npm install ffmpeg-sdk`
 
