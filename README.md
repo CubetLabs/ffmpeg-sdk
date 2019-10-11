@@ -1,7 +1,7 @@
 # ffmpeg-sdk
 Minimal ffmpeg wrapper for NodeJS
 
-[![NPM Version][npm-image]][npm-url]
+  [![NPM Version][npm-image]][npm-url]
 
 ## Features
  * Media file clipping
