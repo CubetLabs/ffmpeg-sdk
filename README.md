@@ -50,3 +50,5 @@ ffmpeg.split('input.mp4', 'output.mp4', [1000, 56770, 67880, 89909])
   console.log('Audio parse error.');
 });
 ```
+[npm-image]: https://img.shields.io/npm/v/ffmpeg.svg
+[npm-url]: https://npmjs.org/package/ffmpeg
